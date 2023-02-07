@@ -56,14 +56,15 @@ img {
     align-items: center;
 }
 #menuBtn {
-    width: 65%;
+    width: 60%;
+    padding-top: 10%;
     background-color: white;
     border: none;
     transition: width .5s;
 }
 #menuBtn:hover {
     cursor: pointer;
-    width: 73%;
+    width: 70%;
 }
 nav ul{
     list-style: none;
@@ -98,16 +99,15 @@ nav ul.responsive {
     color: white;
     text-shadow: 1px 1px white;
 }
-
 #banner {
     height: 100%;
     position: relative;
 }
 .word-box{
-    padding: 0 1em;
+    padding: 0 10px;
     border: 3px solid var(--cello);
     border-radius: 10px;
-    font-size: 73%;
+    font-size: 68%;
     position: absolute;
 }
 #english {
@@ -124,9 +124,9 @@ nav ul.responsive {
     font-family: var(--font-body);
     font-weight: bold;
     position: absolute;
-    width: 20%;
-    height: 5%;
-    top: 60%;
+    width: 100px;
+    height: 30px;
+    top: 57%;
     left: 40%;
     background-color: var(--cello);
     color: white;
@@ -139,6 +139,7 @@ nav ul.responsive {
     cursor: pointer;
 }
 .typed {
+    margin: 3% 0;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
@@ -157,14 +158,77 @@ nav ul.responsive {
     50% {border-right-color: black}
     100% {border-right-color: transparent}
 }
+.divider{
+    margin: 0 .6em;
+}
 
+
+/* translator page */
+.trans-headline {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 2em 1fr 1.5em;
+    grid-gap: 10px;
+}
+.trans-headline h1 {
+    margin: 0;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
 .bananas {
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
 }
 .banana {
-    width: 10%;
+    width: 28px;
 }
+#eng-input {
+    padding: 1em;
+    border: 2px solid var(--cello);
+    border-radius: 10px;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+#trans-now-btn {
+    font-family: var(--font-body);
+    font-weight: bold;
+    background-color: var(--cello);
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 30%;
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+#trans-now-btn:hover {
+    background-color: var(--confetti);
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+}
+#translated {
+    grid-row: 4/5;
+    grid-column: 1/3;
+}
+#mini-translator {
+    margin: 0 1em;
+    width: 30%;
+}
+#minion-lan-box {
+    width: 90%;
+    height: 70%;
+    border: 2px solid var(--cello);
+    border-radius: 10px;
+}
+#minion-output {
+    margin: 10px;
+    font-size: var(--small-font);
+}
+
 
 #main-footer {
     padding: 5px;
@@ -172,7 +236,3 @@ nav ul.responsive {
     background-color: var(--cello);
     color: var(--black-haze);
 }
-
-.divider {
-    border-bottom: 2px solid var(--primary-color);
-  }

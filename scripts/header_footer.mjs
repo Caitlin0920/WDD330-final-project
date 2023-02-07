@@ -29,7 +29,6 @@ export async function loadHeaderFooter() {
     const img = document.getElementById("menu_banana");
 
     menuBtn.addEventListener("click", function(){
-      console.log(img.getAttribute("src"))
         if (img.getAttribute("src") === "/public/images/menu_banana.png"){
             img.setAttribute("src", "/public/images/peeled_banana.png");
         }else if (img.getAttribute("src") === "/public/images/peeled_banana.png") {
