@@ -40,15 +40,16 @@ img {
     width: 100%;
 }
 #main-header {
+    padding-top: .2em;
     display: grid;
     grid-template-columns: 85% 15%;
     grid-template-rows: auto auto;
 }
 #minions {
-    width: 25%;
+    width: 20%;
 }
 #name {
-    width: 70%;
+    width: 78%;
 }
 .nav-box {
     display: flex;
@@ -56,46 +57,41 @@ img {
     align-items: center;
 }
 #menuBtn {
-    width: 60%;
-    padding-top: 10%;
+    width: 75%;
     background-color: white;
     border: none;
     transition: width .5s;
 }
 #menuBtn:hover {
     cursor: pointer;
-    width: 70%;
+    width: 80%;
 }
-nav ul{
-    list-style: none;
+#menu {
     display: none;
-}
-nav {
     grid-row: 2/3;
     grid-column: 1/3;
     text-align: center;
 }
-nav ul.responsive {
-    display: block;
+#menu.responsive {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0 0;
 }
-#menu a li {
-    padding: 10px;
-    transition: 0.5s;
+#menu a {
     border-bottom: 1px solid var(--bitter);
     border-top: 1px solid var(--bitter);
-}
-#menu a li:hover {
-    background-color: var(--cello);
-}
-#menu a{
+    padding: .3em;
+    text-decoration: none;
+    transition: 0.5s;
     font-weight: 800;
     text-decoration: none;
     color: black;
     text-shadow: 1px 1px gray;
 }
 #menu a:hover {
+    background-color: var(--cello);
     color: white;
     text-shadow: 1px 1px white;
 }
@@ -107,30 +103,36 @@ nav ul.responsive {
     padding: 0 10px;
     border: 3px solid var(--cello);
     border-radius: 10px;
-    font-size: 68%;
+    font-size: 10px;
     position: absolute;
 }
 #english {
-    width: 50%;
+    width: 60%;
     top: 45%;
-    left: 40%;
+    left: 30%;
 }
 #minion-lan {
-    width: 55%;
+    width: 70%;
     top: 35%;
     left: 2%;
 }
 #transBtn {
-    font-family: var(--font-body);
-    font-weight: bold;
-    position: absolute;
-    width: 100px;
-    height: 30px;
     top: 57%;
     left: 40%;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: bold;
     background-color: var(--cello);
     color: white;
     border-radius: 10px;
+    border: 2px solid var(--cello);
 }
 #transBtn:hover {
     background-color: var(--confetti);
@@ -172,6 +174,7 @@ nav ul.responsive {
     grid-gap: 10px;
 }
 .trans-headline h1 {
+    font-size: 1.5em;
     margin: 0;
     grid-row: 1/2;
     grid-column: 1/2;
@@ -184,10 +187,11 @@ nav ul.responsive {
     grid-column: 2/3;
 }
 .banana {
-    width: 28px;
+    width: 20px;
 }
 #eng-input {
-    padding: 1em;
+    font-size: 1em;
+    padding: .5em;
     border: 2px solid var(--cello);
     border-radius: 10px;
     grid-row: 2/3;
@@ -201,6 +205,7 @@ nav ul.responsive {
     border-radius: 10px;
     margin: 0 auto;
     width: 30%;
+    height: 28px;
     grid-row: 3/4;
     grid-column: 1/3;
 }
@@ -227,6 +232,57 @@ nav ul.responsive {
 #minion-output {
     margin: 10px;
     font-size: var(--small-font);
+    font-weight: bold;
+}
+
+/* dictionary */
+#dictionary-grid {
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
+}
+#dictionary-grid h1 {
+    font-size: 1.5em;
+}
+input {
+    font-family: var(--font-body);
+    font-weight: bold;
+    margin-top: 2em;
+    height: 10px;
+    padding: 5px;
+}
+.cards {
+    padding-left: 0;
+    font-size: 15px;
+}
+#searchBtn {
+    height: 22px;
+    margin-top: 2em;
+    padding: 0;
+}
+.card-box {
+    margin: .5em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2px;
+    margin-bottom: 1em;
+}
+.card-box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.card-box h3, .card-box p {
+    margin: 0;
+    padding: 10px;
+}
+.card-box h3 {
+    background-color: var(--picton-blue);
+    font-family: var(--font-headline);
+    color: white;
+    text-shadow: -1px 1px 0 black,
+                1px 1px 0 black,
+                1px -1px 0 black,
+                -1px -1px 0 black;
 }
 
 
@@ -235,4 +291,5 @@ nav ul.responsive {
     text-align: center;
     background-color: var(--cello);
     color: var(--black-haze);
+    font-size: var(--small-font);
 }

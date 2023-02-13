@@ -38,7 +38,7 @@ translateBtn.addEventListener("click", async function(){
         output.innerHTML = `${data.contents.translated}`;
 
     }else if (getLocalStorage("first-click-hour") == hour && parseInt(localCount) == 5){
-        displayOutput.style.display = "block";
+        displayOutput.style.display = "flex";
         output.innerHTML = "You have reached the hourly limit! Please come back next hour!";
 
     }else if (getLocalStorage("first-click-hour") != hour){

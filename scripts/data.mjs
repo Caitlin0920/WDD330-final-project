@@ -10,6 +10,14 @@ export async function apiFetch(url){
         if (res.ok){
             let data = await res.json();
             console.log(data)
+            // store the sreach into a dictionary
+            let list = getLocalStorage("dictionary");
+            if (list == null){
+                list = [];
+            }
+            list.push(data);
+            console.log(list);
+            setLocalStorage("dictionary", list);
             return data
         }else{
             throw Error(await response.text())
@@ -21,9 +29,9 @@ export async function apiFetch(url){
 
 // retrieve data from localstorage
 export function getLocalStorage(key) {
-return localStorage.getItem(key);
+    return JSON.parse(localStorage.getItem(key));
 }
 // save data to local storage
 export function setLocalStorage(key, data) {
-localStorage.setItem(key, data);
+    localStorage.setItem(key, JSON.stringify(data));
 }
