@@ -54,10 +54,6 @@ searchBtn.addEventListener("click", function() {
             warning.style.display = "none";
             searchList = getLocalStorage("dictionary");
         }
-        // }else {
-        //     warning.innerHTML = `Cannot find <strong>"${search.value}"</strong>. Please translate the word/sentence first.`
-        //     warning.style.display = "block";
-        // }
     });
     if (searchList == "") {
         warning.innerHTML = `Cannot find <strong>"${search.value}"</strong>. Please translate the word/sentence first.`
